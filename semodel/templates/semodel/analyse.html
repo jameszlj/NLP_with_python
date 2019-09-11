@@ -1,0 +1,22 @@
+{% extends "sentiment/base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block content %}
+
+    <h1>语义分析测试页面</h1>
+    <p>&nbsp;</p>
+
+    <form class="form-{{ layout }}" action="" method="post">
+        {% csrf_token %}
+
+        {{ uf|as_bootstrap:layout }}
+
+        <input type="submit" value="提交" class="btn btn-primary">
+
+
+    </form>
+
+    <p>提交表单来看一下语义分析的结果</p>
+
+{% endblock %}
